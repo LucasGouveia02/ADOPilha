@@ -38,8 +38,7 @@ public class Lista {
     }
 
     public Celula top() {
-        Celula e;
-        return e = atual;
+        return atual;
     }
 
     public boolean pop() {
@@ -48,7 +47,6 @@ public class Lista {
             if (p == inicio) {
                 inicio = p.getProx();
                 atual = null;
-                p.setProx(null);
                 cont--;
             } else if (p == atual) {
                 atual = p.getAnt();
