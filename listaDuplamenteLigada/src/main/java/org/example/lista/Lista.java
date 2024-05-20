@@ -14,6 +14,7 @@ public class Lista {
     public void push(int num) {
         if (empty()) {
             inicio = new Celula(null, null, num);
+            atual = inicio;
             aux = inicio;
             cont++;
         } else {
@@ -46,8 +47,8 @@ public class Lista {
         if (p != null) {
             if (p == inicio) {
                 inicio = p.getProx();
+                atual = null;
                 p.setProx(null);
-                inicio.setAnt(null);
                 cont--;
             } else if (p == atual) {
                 atual = p.getAnt();
